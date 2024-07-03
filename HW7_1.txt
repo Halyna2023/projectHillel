@@ -1,0 +1,16 @@
+const person = {
+    height: 180, 
+    weight: 75, 
+    waist: 80,   
+  
+    getInfo: function() {
+        for (let key in this) {
+            if (this.hasOwnProperty(key) && typeof this[key] !== 'function') {
+                console.log(`${key}: ${this[key]}`);
+            }
+        }
+    }
+};
+person.getInfo(); 
+person.hairColor = 'brown';
+person.getInfo();
